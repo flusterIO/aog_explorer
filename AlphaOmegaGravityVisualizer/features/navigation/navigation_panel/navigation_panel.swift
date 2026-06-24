@@ -11,27 +11,46 @@ import SwiftUI
 
 struct NavigationPanel: View {
     public let items: [NavigationItem] = [
-        NavigationItem(latex: """
-        $$
-        \\gamma = \\frac{1}{1 - \\frac{v^2}{c^2}}
-        $$
-        """, page: .gamma),
-        NavigationItem(latex: """
-            $$
-            \\gamma_g = 1 + \\frac{g}{R}
-            $$
-            """, page: .gravityExploration),
-        NavigationItem(latex: """
-            $$
-            \\alpha = \\Gamma \\omega
-            $$
-            """, page: .electromagnetism),
 
     ]
     var body: some View {
-            List(items) { item in
-                NavigationPanelItem(item: item)
+        ScrollView {
+            VStack(alignment: .leading) {
+                
+                NavigationPanelItem(item: NavigationItem(latex: """
+            $$
+            \\text{Home}
+            $$
+            """, page: .home))
+                NavigationPanelItem(item: NavigationItem(latex: """
+            $$
+            \\gamma = \\frac{1}{1 - \\frac{v^2}{c^2}}
+            $$
+            """, page: .gamma))
+                NavigationPanelItem(item: NavigationItem(latex: """
+                $$
+                \\gamma_g = 1 + \\frac{g}{R}
+                $$
+                """, page: .gravityExploration))
+                NavigationPanelItem(item: NavigationItem(latex: """
+                $$
+                \\alpha = \\Gamma \\omega
+                $$
+                """, page: .electromagnetism))
+                NavigationSection(items: [
+                    NavigationItem(latex: """
+                    $$
+                    \\text{Exporatory}
+                    $$
+                    """, page: .exploratory_li),
+                    NavigationItem(latex: """
+                    $$
+                    \\text{Exporatory}_{\\text{gravity}}
+                    $$
+                    """, page: .exploratory_gravity)
+                ])
             }
+        }
         }
 }
 

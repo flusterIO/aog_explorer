@@ -18,12 +18,18 @@ struct ContentView: View {
             NavigationPanel()
         } content: {
             switch appState.activePage {
+            case .home:
+                HomePage()
             case .gamma:
                 GammaExplorationPage()
             case .gravityExploration:
                 GravityExplorationPage()
             case .electromagnetism:
                 ElectromagnetismPage()
+            case .exploratory_li:
+                ExporatoryLiObservationsPage()
+            case .exploratory_gravity:
+                GravityExploratoryPage()
             }
         }
         detail: {

@@ -27,9 +27,15 @@ struct MainControlPanel: View {
                     unitText: "Points"
                 )
                 VariableDashboard()
+                Button(action: {
+                    AppStorageKey.resetAll()
+                }, label: {
+                    Text("Reset All")
+                })
             }
             .padding()
         }
+        .scrollIndicators(.never)
     }
 }
 

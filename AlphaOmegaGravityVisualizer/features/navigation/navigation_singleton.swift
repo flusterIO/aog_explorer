@@ -13,7 +13,7 @@ import Combine
 public class NavigationSingleton: ObservableObject {
     
     public static var shared: NavigationSingleton = .init()
-    @Published public var activePage: PageView = .gamma
+    @Published public var activePage: PageView = .home
     
     private init() {
         

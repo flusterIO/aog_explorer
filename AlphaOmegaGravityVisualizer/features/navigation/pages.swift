@@ -8,7 +8,10 @@
 import Foundation
 
 public enum PageView: String {
-    case gamma,
-    gravityExploration,
-    electromagnetism
+    case home,
+        gamma,
+        gravityExploration,
+        electromagnetism,
+        exploratory_li,
+        exploratory_gravity
 }

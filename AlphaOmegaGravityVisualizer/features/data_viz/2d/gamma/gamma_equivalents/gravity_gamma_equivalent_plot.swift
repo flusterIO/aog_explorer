@@ -15,11 +15,11 @@ class GravityGammaData: Identifiable {
     var gravityGamma: Double
     var R_earth: Double
     var gravityTimeDepedentGamma: Double
-    init(r: Double, dt: Double, constants: Constants) {
+    init(r: Double, constants: Constants, dt: Double, G: Double, c: Double, earthMass: Double) {
         self.R_earth = r
-        let mb = constants.getEarthMassiveBody()
-        self.gravityGamma = mb.gravityGamaEquivalent(G: constants.G(), R: r)
-        self.gravityTimeDepedentGamma = mb.gravityGamaEquivalentTimeDependent(dt: dt, G: constants.G(), c: constants.c(), R: r)
+        let mb = MassiveBody(shape: Sphere(radius: r), vec: Vec3.zero(), mass: earthMass)
+        self.gravityGamma = mb.gravityGamaEquivalent(G: G, R: r)
+        self.gravityTimeDepedentGamma = mb.gravityGamaEquivalentTimeDependent(dt: dt, G: G, c: c, R: r)
     }
 }
 
@@ -29,14 +29,20 @@ public struct GravityGammaPlot: View {
     @AppStorage(AppStorageKey.axis_points.rawValue) private var axisPoints: Double = 100
     let aog = AOG()
     let earth = MassiveBody.earth()
-    let constants = Constants()
+    @ObservedObject var constants = Constants()
     var data: [GravityGammaData] {
         let d: AxisData = .fromLinSpace(0,  earthRadius, axisPoints)
+        let G = constants.G()
+        let c = constants.c()
+        let earthMass = constants.earthMass()
         return d.data.map { r in
             GravityGammaData(
                 r: r,
+                constants: constants,
                 dt: constants.timeDelta(),
-                constants: constants
+                G: G,
+                c: c,
+                earthMass: earthMass
             )
         }
     }

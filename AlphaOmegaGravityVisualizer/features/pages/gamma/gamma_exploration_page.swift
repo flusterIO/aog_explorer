@@ -33,10 +33,20 @@ struct GammaExplorationPage: View {
                 )
                 GravityGammaPlot()
                     .frame(height: 400)
+                MarkdownView(markdown: """
+                    The above plot represents the the gravitational equivalent of γ as the integral of this equation
+                    induces our gravitational acceleration secondarily to the divergence produced by ω.
+                    """)
+                VOfGravityGammaPlot()
+                    .frame(height: 400)
+                MarkdownView(markdown: """
+                    The above plot is the velocity required to induce the γ magnitude of the plot prior in Einstein's model of relativity.
+                    """)
             }
             .padding()
         }
         .scrollIndicators(.never)
+        .navigationTitle("γ")
     }
 }
 
