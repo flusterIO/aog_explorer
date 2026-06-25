@@ -24,15 +24,6 @@ struct GravityExplorationPage: View {
                     **without** any unseed mass.
                     """)
                 
-                OrbitalDtPlot()
-                    .frame(height: 400)
-                
-                MarkdownView(markdown: """
-                    The above equation can be derived triginometrically from this model of spatial divergence.
-                    The derived Δt produces a γ, that when we solve for v matches our observed velocity relative
-                    to the CMB dipole to within 1% (371,580 km/s).
-                    """)
-                
                 DerivedAlphaDiagram()
                     .frame(height: 400)
                 

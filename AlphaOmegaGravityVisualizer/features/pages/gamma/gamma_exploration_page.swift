@@ -10,6 +10,25 @@ import Foundation
 import SwiftUI
 
 struct GammaExplorationPage: View {
+    @ObservedObject private var constants = Constants()
+    var earthRadius: Double {
+        constants.earthRadius()
+    }
+    var earthMass: Double {
+        constants.earthMass()
+    }
+    var G: Double {
+        constants.G()
+    }
+    var c: Double {
+        constants.c()
+    }
+    var currentEarth: MassiveBody {
+        MassiveBody(shape: Sphere(radius: earthRadius), vec: Vec3.zero(), mass: earthMass)
+    }
+    var orbitalDt: Double {
+    return -currentEarth.derivedOrbitalDtAtR(R: earthRadius, G: G)
+    }
     var body: some View {
         ScrollView {
             VStack(spacing: 32) {
@@ -20,17 +39,28 @@ struct GammaExplorationPage: View {
                         The above plot represents Einstein's traditional γ, as it appears in his famous 1905 paper.
                         """
                 )
-                OrbitalDtGammaPlot()
+                OrbitalDtVofGammaPlot()
                     .frame(height: 400)
                 MarkdownView(
                     markdown: """
-                        Above is the γ (gamma) of the 'dt' found in the orbital 'dt' plot on the gravity page. This demontrates the nature of gravity,
-                        where a body closer to the source of gravitation is indistinguishable from a body approaching the speed of light, because it is
-                        space that is moving, not the observer.  
-                        
-                        As the observer approaches R=0, v approaches c, until a point where v=c at what we now call the event horizon.
+                        Above is the 'v' of the 'γ' found by the triginometric solution to our orbital velocity, basically:
                         """
                 )
+                MathView(latex: """
+                    $$
+                    v = c \\sqrt{1 - \\frac{1}{\\gamma_{(dt)}^2}} = \(StandardCosmology.vFromGamma(gamma: -orbitalDt, c: c).bePretty(.decimal)) \\ \\text{m} \\ \\text{s}^{-1}
+                    $$
+                    """, fontSize: 16)
+                Text("Where the following equation and plot represent the 'dt' necessary to induce the 'γ' found for the orbital velocity 'v'.")
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                MathView(latex: """
+                    $$
+                    dt = R_{\\oplus}^3 \\left(\\frac{1}{\\frac{1}{2}G M_{\\oplus} - R_{\\oplus}^3}\\right) = \(orbitalDt.bePretty(.decimal, accuracy: 8, maxDigits: 10)) \\ \\text{s}
+                    $$
+                    """, fontSize: 16)
+                OrbitalDtPlot()
+                    .frame(height: 400)
+                Divider()
                 GravityGammaPlot()
                     .frame(height: 400)
                 MarkdownView(markdown: """

@@ -42,6 +42,8 @@ struct HomePage: View {
                 DerivationWalkthroughOne()
                 DerivationTwo()
                 DerivationThree()
+                DerivationFour()
+                DerivationFiveMassDensityApproximation()
             }
             .padding()
             .padding(.vertical, 64)

@@ -45,12 +45,12 @@ struct NavigationPanel: View {
                 NavigationSection(items: [
                     NavigationItem(latex: """
                     $$
-                    \\text{Exporatory}
+                    \\text{Exploratory}
                     $$
                     """, page: .exploratory_li),
                     NavigationItem(latex: """
                     $$
-                    \\text{Exporatory}_{\\text{gravity}}
+                    \\text{Exploratory}_{\\text{gravity}}
                     $$
                     """, page: .exploratory_gravity)
                 ])
