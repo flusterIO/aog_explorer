@@ -37,7 +37,7 @@ struct HomePage: View {
     }
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 32) {
+            VStack(alignment: .center, spacing: 32) {
                 LandingPageIntro()
                 DerivationWalkthroughOne()
                 DerivationTwo()

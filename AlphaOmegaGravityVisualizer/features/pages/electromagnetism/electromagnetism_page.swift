@@ -26,6 +26,7 @@ struct ElectromagnetismPage: View {
             }
             .padding()
         }
+        .navigationTitle("Electromagnetism")
     }
 }
 

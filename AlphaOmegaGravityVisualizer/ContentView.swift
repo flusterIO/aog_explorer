@@ -30,6 +30,8 @@ struct ContentView: View {
                 ExporatoryLiObservationsPage()
             case .exploratory_gravity:
                 GravityExploratoryPage()
+            case .grossLegalShit:
+                LegalAndShamelessPlug()
             }
         }
         detail: {

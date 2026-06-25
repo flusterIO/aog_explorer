@@ -16,7 +16,6 @@ struct NavigationPanel: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                
                 NavigationPanelItem(item: NavigationItem(latex: """
             $$
             \\text{Home}
@@ -37,6 +36,12 @@ struct NavigationPanel: View {
                 \\alpha = \\Gamma \\omega
                 $$
                 """, page: .electromagnetism))
+                NavigationPanelItem(item: NavigationItem(latex: """
+                    $$
+                    \\text{Legal}
+                    $$
+                    """, page: .grossLegalShit))
+                #if DEBUG
                 NavigationSection(items: [
                     NavigationItem(latex: """
                     $$
@@ -49,6 +54,7 @@ struct NavigationPanel: View {
                     $$
                     """, page: .exploratory_gravity)
                 ])
+                #endif
             }
         }
         }

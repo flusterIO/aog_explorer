@@ -17,6 +17,13 @@ struct MainControlPanel: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .center) {
+                VStack(alignment: .leading) {
+                    Text("Control Panel")
+                        .font(.title)
+                    Text("Control variables dynamically through this panel. Reset them with the button at the bottom, and remember, 'NaN' means 'not-a-number', usually because a square root can't be found because of a negative number.")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }.frame(maxWidth: .infinity, alignment: .leading)
                 IntegerSlider(
                     value: $dataPoints,
                     range: 10...1000,
