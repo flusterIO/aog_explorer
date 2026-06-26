@@ -14,5 +14,6 @@ public enum PageView: String {
         electromagnetism,
         exploratory_li,
         exploratory_gravity,
+        describeState,
         grossLegalShit
 }

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import AlphaOmegaGravity
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
@@ -30,6 +31,8 @@ struct ContentView: View {
                 ExporatoryLiObservationsPage()
             case .exploratory_gravity:
                 GravityExploratoryPage()
+            case .describeState:
+                DescribeStatePage()
             case .grossLegalShit:
                 LegalAndShamelessPlug()
             }

@@ -32,8 +32,9 @@ struct GravityExplorationPage: View {
                     mass density. This equation does **not** arise where Γ approximates 1/2 _inside_ of the cube root
                     as it does for very massive bodies like our Sun or even Jupyter.  
                     
-                    The 'Solar' line represents the equation for massive, slowly rotating bodies as the 'spinor' approximation
-                    collapses.
+                    The 'Solar' line represents the equation for massive, slowly rotating bodies as the 'spinor' approximation does not experience the spatial dilation as divergence, which in turn gives rise to the cube root, or the torsion which gives rise to α.
+                    
+                    I don't know how to derive α from first, **Newtonian** principles _yet_, but we're closer than we've ever been.
                     """)
                 
                 EarthRotationalVelocityDiagram()
@@ -43,11 +44,16 @@ struct GravityExplorationPage: View {
                     The above equation and subsequent plot reproduce Earth's rotational velocity to within 1.18 inches per second, a painfully slow walking pace for an orbital velocity that takes into account the Earth's radius and a period as long as our day.
                     """)
                 
-                PoyntingVectorKinda()
+                DThetaOverDRPlot()
                     .frame(height: 300)
-                
+                DThetaTimesDRPlot()
+                    .frame(height: 300)
+                DThetaPlusDRPlot()
+                    .frame(height: 300)
                 MarkdownView(markdown: """
-                    The above plot can be derived from the following equation, which is discussed in greater detail [here](https://flusterapp.com)
+                    The above 3 plots reresent the same 2 vectors dθ and dR, first as a ratio, then as a product, and lastly, as a sum.
+                    
+                    The formula used for these plots can be derived from the following equation, which is discussed in greater detail [here](https://www.flusterapp.com/blog/by_path/on_the_gravitational_nature_of_time).
                     """)
                 
                 MathView(latex: """

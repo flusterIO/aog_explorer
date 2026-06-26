@@ -38,6 +38,11 @@ struct NavigationPanel: View {
                 """, page: .electromagnetism))
                 NavigationPanelItem(item: NavigationItem(latex: """
                     $$
+                    \\text{Describe}
+                    $$
+                    """, page: .describeState))
+                NavigationPanelItem(item: NavigationItem(latex: """
+                    $$
                     \\text{Legal}
                     $$
                     """, page: .grossLegalShit))
@@ -56,6 +61,7 @@ struct NavigationPanel: View {
                 ])
                 #endif
             }
+            .padding(.horizontal)
         }
         }
 }

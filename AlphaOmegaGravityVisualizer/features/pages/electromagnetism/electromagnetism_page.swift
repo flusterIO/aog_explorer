@@ -16,7 +16,7 @@ struct ElectromagnetismPage: View {
                 CurrentEquivalentPlot()
                     .frame(height: 400)
                 MarkdownView(markdown: """
-                    On Earth, there exists a Radius where this value is precisely the transcental quantity Φ.
+                    On Earth, there exists a Radius where this value is precisely the transcendental quantity Φ.
                     """)
                 MathView(latex: """
                     $$
