@@ -13,7 +13,7 @@ struct GravityExploratoryPage: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 32) {
-                SinThetaTimesDrSurface()
+                RelativisticGravitySurfacePlot()
                     .frame(height: 400)
             }
             .padding()

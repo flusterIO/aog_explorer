@@ -78,6 +78,12 @@ struct GravityExplorationPage: View {
                     Above, G is defined in terms of inverse mass-density and electromagnetic parameters, aligning with observation to a similar degree of accuracy.
                     """)
                 
+                DDrOmegaPlot()
+                    .frame(height: 400)
+                MarkdownView(markdown: """
+                    The above plot plots the derivative of ω with respect to R.
+                    """)
+
             }
             .padding()
             
