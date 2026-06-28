@@ -114,13 +114,17 @@ struct ElectromagnetismPage: View {
                  MagneticFieldDivergenceIntegral()
                     .frame(height: 400)
                 MarkdownView(markdown: """
-                    This value is _shockingly_ close (without state change) to
+                    This value is oddly close (without state change) to
                     """)
                 MathView(latex: """
                     $$
                     \\sqrt{\\Phi \\times 10^{42}} \\pm \(Statistics.percentDiff(a: magneticDivergenceIntegral, b: sqrt(GOLDEN_RATIO * pow(10, 42))))
                     $$
                     """, fontSize: 16)
+                MarkdownView(markdown: """
+                    Maybe not an anomalous finding on it's own, but in the context of _all_ of these 'dimensional coincidences' that just happen to fall directly out of a single, mathematically equivalent (in magnitude) modification to Einstein's model of relativity?
+                    
+                    """)
 
             }
             .padding()

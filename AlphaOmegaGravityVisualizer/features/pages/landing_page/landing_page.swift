@@ -44,6 +44,7 @@ struct HomePage: View {
                 DerivationThree()
                 DerivationFour()
                 DerivationFiveMassDensityApproximation()
+                DerivationMagneticDivergence()
             }
             .padding()
             .padding(.vertical, 64)
