@@ -2,6 +2,8 @@
 
 An interactive macOS companion to the paper **"The Lorentz Factor as the Slope of an Additional Spatial Coordinate: Embedding, Painlevé–Gullstrand Flow, and the Issue of Simultaneity"**. You can read the full paper on Zenodo: [zenodo.org/records/24451649](https://zenodo.org/records/24487055).
 
+Don't forget to whitelist the application in your settings. I have an Apple certificate but it wasn't worth waiting to get notarized for a simple demo application like this.
+
 ![Flamm embedding](./screenshots/flamm_embedding.png)
 
 The paper reads the Lorentz factor as the slope of an additional, non-compactified spatial coordinate _y_:
