@@ -1,10 +1,10 @@
 # Lorentz Slope Visualizer
 
-An interactive macOS companion to the paper **"The Lorentz Factor as the Slope of an Additional Spatial Coordinate: Embedding, Painlevé–Gullstrand Flow, and the Issue of Simultaneity"**. You can read the full paper on Zenodo: [zenodo.org/records/24451649](https://zenodo.org/records/24451649).
+An interactive macOS companion to the paper **"The Lorentz Factor as the Slope of an Additional Spatial Coordinate: Embedding, Painlevé–Gullstrand Flow, and the Issue of Simultaneity"**. You can read the full paper on Zenodo: [zenodo.org/records/24451649](https://zenodo.org/records/24487055).
 
 ![Flamm embedding](./screenshots/flamm_embedding.png)
 
-The paper reads the Lorentz factor as the slope of an additional, non-compactified spatial coordinate *y*:
+The paper reads the Lorentz factor as the slope of an additional, non-compactified spatial coordinate _y_:
 
 $$\gamma = \sqrt{1 + (\partial_x y)^2}$$
 
@@ -12,25 +12,25 @@ Every page in the app is live. Drag a slider and every plot, 3D surface and read
 
 ## Screenshots
 
-| | |
-|---|---|
-| ![Orbits & precession](./screenshots/orbits_precession.png) | ![Minkowski interval](./screenshots/minkowski_interval.png) |
+|                                                                                                                                      |                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------- |
+| ![Orbits & precession](./screenshots/orbits_precession.png)                                                                          | ![Minkowski interval](./screenshots/minkowski_interval.png)                                             |
 | **Orbits & Precession:** Schwarzschild orbits integrated live, with the ISCO, the photon sphere and the measured perihelion advance. | **Minkowski Interval:** the instantaneous transformations move the event along the invariant hyperbola. |
 
 ## What's inside
 
-| Section | Pages |
-|---|---|
-| Overview | 3D Flamm embedding, the four core relations, a map of the paper |
-| Kinematics of *y* | Lighthouse & Clock-Tower · γ as a Slope · Minkowski Interval |
-| Embedding & Metric | Flamm Embedding · Mass Distributions · The Component G₄₄ · The Four-Potential |
-| Lapse & Dynamics | Lapse from the Embedding · Interior & Buchdahl Bound · Orbits & Precession · Rotation & Frame Dragging |
-| Flow & Cosmology | Painlevé–Gullstrand river flow · Hubble Flow & the Sciama identity |
-| Galactic Hypothesis | Hypothesis M against the Milky Way rotation curve, with a live g₀ fit |
-| Numerical Observations | Characteristic Velocities · Fine-Structure Alignments |
-| Exploration | Star Lab · Rapidity Composition · Dictionary & Status |
+| Section                | Pages                                                                                                  |
+| ---------------------- | ------------------------------------------------------------------------------------------------------ |
+| Overview               | 3D Flamm embedding, the four core relations, a map of the paper                                        |
+| Kinematics of _y_      | Lighthouse & Clock-Tower · γ as a Slope · Minkowski Interval                                           |
+| Embedding & Metric     | Flamm Embedding · Mass Distributions · The Component G₄₄ · The Four-Potential                          |
+| Lapse & Dynamics       | Lapse from the Embedding · Interior & Buchdahl Bound · Orbits & Precession · Rotation & Frame Dragging |
+| Flow & Cosmology       | Painlevé–Gullstrand river flow · Hubble Flow & the Sciama identity                                     |
+| Galactic Hypothesis    | Hypothesis M against the Milky Way rotation curve, with a live g₀ fit                                  |
+| Numerical Observations | Characteristic Velocities · Fine-Structure Alignments                                                  |
+| Exploration            | Star Lab · Rapidity Composition · Dictionary & Status                                                  |
 
-Every equation carries a badge that follows the paper's own separation of claims: *identity*, *derived here*, *equivalent to GR*, *imported from GR*, *assumption*, *hypothesis*, *numerical alignment* or *exploration*. The universal constants (c, G, H₀, κ′, τ̂) can be changed from the toolbar inspector and update every page.
+Every equation carries a badge that follows the paper's own separation of claims: _identity_, _derived here_, _equivalent to GR_, _imported from GR_, _assumption_, _hypothesis_, _numerical alignment_ or _exploration_. The universal constants (c, G, H₀, κ′, τ̂) can be changed from the toolbar inspector and update every page.
 
 ## Building
 
