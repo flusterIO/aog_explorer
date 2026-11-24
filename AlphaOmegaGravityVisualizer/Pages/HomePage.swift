@@ -45,6 +45,14 @@ struct HomePage: View {
                 Text("Andrew Mueller · Independent Researcher")
                     .font(.callout)
                     .foregroundStyle(.tertiary)
+                HStack(spacing: 4) {
+                    Text("Read the full paper on")
+                        .foregroundStyle(.secondary)
+                    Link("Zenodo", destination: URL(string: "https://zenodo.org/records/24451649")!)
+                    Image(systemName: "arrow.up.right.square")
+                        .foregroundStyle(.tint)
+                }
+                .font(.callout)
 
                 Card {
                     VStack(alignment: .leading, spacing: 10) {
